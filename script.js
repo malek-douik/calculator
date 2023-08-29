@@ -59,7 +59,11 @@ let result_flag = 0;
 numbers.forEach(num => {
     num.addEventListener('click' , e => {
         if (result_flag == 1) {   // lets you clear when you enter a number after result
-            reset();
+            expression.firstNum = resultNum;
+            expression.secondNum = ''; 
+            expression.operator = '';
+            resultNum = '';
+            
             result_flag = 0;
         }
         if (flag == 0) {
